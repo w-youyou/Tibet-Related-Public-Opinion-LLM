@@ -90,7 +90,7 @@
 | D. +MMR（无条件） | 所有 query 默认执行 MMR 多样性重排 |
 | E. +MMR（条件触发） | 仅当候选 chunk 文本高度重复时触发 MMR |
 
-![RAG 检索消融实验结果](@ablation.png)
+![RAG 检索消融实验结果](image/ablation.png)
 
 
 ### 性能总结
