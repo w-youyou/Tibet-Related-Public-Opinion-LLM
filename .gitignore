@@ -1,0 +1,44 @@
+# === 密钥 ===
+.env
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.egg
+.venv/
+venv/
+
+# === Node ===
+node_modules/
+rag_web/dist/
+
+# === 大文件 / 运行时数据 ===
+backend/models/
+backend/media/
+chroma_db/
+backend/chroma_db*/
+backend/tmp/
+backend/db.sqlite3
+KnowledgeBase/
+docs/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+.codebuddy/
+.agents/
+.claude/
+.codegraph/
+.codex/
+.cursor/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === 日志 ===
+*.log

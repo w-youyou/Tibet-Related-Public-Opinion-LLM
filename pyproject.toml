@@ -1,0 +1,73 @@
+﻿[project]
+name = "pubilcaffairsllm"
+version = "0.1.0"
+description = "涉藏舆情知识问答 RAG 系统"
+requires-python = ">=3.10"
+dependencies = [
+    # Web 框架
+    "django>=5.0,<7.0",
+    "flask>=3.0",
+    "fastapi>=0.128.0",
+    "uvicorn[standard]>=0.40.0",
+    # LangChain 生态
+    "langchain>=1.2.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.0",
+    "langchain-core>=1.2.0",
+    "langchain-experimental>=0.4.0",
+    "langchain-huggingface>=1.2.0",
+    "langchain-openai>=1.1.0",
+    "langchain-text-splitters>=1.1.0",
+    # 向量数据库 & Embeddings
+    "chromadb>=0.5.0",
+    "sentence-transformers>=4.0",
+    # AI / LLM
+    "openai>=2.0",
+    "dashscope>=1.20",
+    "torch>=2.0",
+    "huggingface-hub>=1.0",
+    # 文档处理
+    "PyMuPDF>=1.20",
+    "python-docx>=1.0",
+    "pdfplumber>=0.10",
+    "PyPDF2>=3.0",
+    "pytesseract>=0.3",
+    "Pillow>=12.0",
+    "openpyxl>=3.1",
+    # docx2pdf（Windows only，依赖 MS Word COM）
+    "docx2pdf>=0.1",
+    # 数据处理
+    "pandas>=2.0",
+    "numpy>=2.0",
+    "scipy>=1.10",
+    # 检索 & 分词
+    "rank-bm25>=0.2",
+    "jieba>=0.42",
+    "rapidfuzz>=3.0",
+    # 工具
+    "python-dotenv>=1.0",
+    "requests>=2.32",
+    "pydantic>=2.0",
+    "tqdm>=4.0",
+    "django-cors-headers>=4.9.0",
+    "python-pptx>=1.0.2",
+    "cairosvg>=2.9.0",
+    "reportlab>=5.0.0",
+    "svglib>=2.0.2",
+]
+
+[project.optional-dependencies]
+windows = ["pywin32>=306"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.uv]
+# 本地包路径（hybrid_retrieval_fusion 和 promt 在项目根目录）
+# uv 会自动发现项目根目录下的 Python 模块
